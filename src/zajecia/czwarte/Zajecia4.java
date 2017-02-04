@@ -1,4 +1,6 @@
-package zajecia;
+package zajecia.czwarte;
+
+import java.util.Scanner;
 
 /**
  * Created by RENT on 2017-02-04.
@@ -53,7 +55,6 @@ public class Zajecia4 {
     }
 
 
-
     public static double fahrenheitToCelsius(int value) {
         return (value - 32) / 1.8;
 
@@ -69,7 +70,7 @@ public class Zajecia4 {
         return sum;
     }
 
-    public static int dlugoscTablicy (int[] array) {
+    public static int dlugoscTablicy(int[] array) {
         int length = 0;
         for (int i = 0; i < array.length; i++) {
             length = array.length;
@@ -77,7 +78,7 @@ public class Zajecia4 {
         return length;
     }
 
-    public static double average (int[] array) {
+    public static double average(int[] array) {
         int srednia = 0;
         for (int i = 0; i < array.length; i++) {
             srednia = statistics(array) / dlugoscTablicy(array);
@@ -85,7 +86,7 @@ public class Zajecia4 {
         return srednia;
     }
 
-    public static double iloczyn (int[] array) {
+    public static double iloczyn(int[] array) {
         int product = 1;
         for (int i = 0; i < array.length; i++) {
             product = statistics(array) * dlugoscTablicy(array);
@@ -93,7 +94,7 @@ public class Zajecia4 {
         return product;
     }
 
-    public static int numberOfEven (int[] array) {
+    public static int numberOfEven(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
@@ -104,11 +105,19 @@ public class Zajecia4 {
         return sum;
     }
 
-    public static int numberOfOdd (int[] array) {
+    public static int numberOfOdd(int[] array) {
         return array.length - numberOfEven(array);
-        }
-
     }
+
+    public static boolean isEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
+}
+
+
 
 
 
