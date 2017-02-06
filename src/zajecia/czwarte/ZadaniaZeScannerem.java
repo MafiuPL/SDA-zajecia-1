@@ -14,13 +14,38 @@ public class ZadaniaZeScannerem {
         //     String lastName = scanner.nextLine();
         //    System.out.println("Your name is " + name + " " + lastName);
         //   checkNumberIsOdd();
-        //  compareThreeNumbersFromUser();
-        // int[] array = {1, -4, 6, 7, -3, 5, 2};
-        //int numberFromUser = getNumberFromUser();
-        System.out.println("Grade system 2000");
-        double avg = avgOfGrades();
-        System.out.println("Avg of your grades is " + avg);
+        //   compareThreeNumbersFromUser();
+        //   int[] array = {1, -4, 6, 7, -3, 5, 2};
+        //   int numberFromUser = getNumberFromUser();
+        //  System.out.println("Grade system 2000");
+        //  double avg = avgOfGrades();
+        //  System.out.println("Avg of your grades is " + avg);
+        calculator();
     }
+
+    public static void calculator() {
+        System.out.println("1. Dodawanie");
+        System.out.println("2. Odejmowanie");
+        System.out.println("3. Mnożenie");
+        System.out.println("4. Dzielenie");
+        int operation = getNumberFromUser("Wybierz operacje");
+        int firstNumber = getNumberFromUser("Pierwsza liczba");
+        int secondNumber = getNumberFromUser("Druga liczba");
+        if (operation == 1)
+        {
+            System.out.println(firstNumber + secondNumber);
+        } else if (operation == 2) {
+            System.out.println(firstNumber + " - " + secondNumber + " = ");
+
+        } else if (operation == 3) {
+            System.out.println(firstNumber + secondNumber);
+
+        } else if (operation == 4) {
+            System.out.println(firstNumber + secondNumber);
+
+        }
+    }
+
 
     public static double avgOfGrades() {
         int size = getNumberFromUser("Insert number of grades");
