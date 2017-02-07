@@ -17,11 +17,12 @@ public class Zajecia5 {
         //   evenMatrix(number);
         //   System.out.println(sumOfNumbersFromUser());
         //   printArray(arrayOfNumbersFromUser());\
-        Random random = new Random ();
-        int iloscKrokowDoZwyciestwa = game(random.nextInt(100));
-        System.out.println("Koniec gry");
-        System.out.println("Wygrales w " + iloscKrokowDoZwyciestwa + " krokach");
-
+        //   Random random = new Random();
+        //   int iloscKrokowDoZwyciestwa = game(random.nextInt(100));
+        //   System.out.println("Koniec gry");
+        //   System.out.println("Wygrales w " + iloscKrokowDoZwyciestwa + " krokach");
+        int[] orderedArray = homework();
+        printHomework(orderedArray);
     }
 
     public static void triangle(int number) {
@@ -142,7 +143,7 @@ public class Zajecia5 {
             int numberFromUser = ZadaniaZeScannerem.getNumberFromUser();
             counter++;
             if (numberFromUser == number) {
-            flag = false;
+                flag = false;
             } else if (numberFromUser < number) {
                 System.out.println("Too low number");
             } else {
@@ -150,6 +151,29 @@ public class Zajecia5 {
             }
         }
         return counter++;
+    }
+
+    public static int[] homework() {
+        int[] array = new int[10];
+        boolean flag = true;
+        while (flag) {
+            int numberFromUser = ZadaniaZeScannerem.getNumberFromUser();
+            if (numberFromUser >= 0 && numberFromUser <= 9) {
+                array[numberFromUser]++;
+            } else {
+                flag = false;
+            }
+        }
+        return array;
+    }
+
+    public static void printHomework(int[] orderedArray) {
+        for (int i = 0; i < orderedArray.length; i++) {
+            for (int j = 0; j < orderedArray[i]; j++) {
+                System.out.print(i);
+            }
+        }
+
     }
 }
 
