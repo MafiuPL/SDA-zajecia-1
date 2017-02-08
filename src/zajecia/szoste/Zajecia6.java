@@ -107,6 +107,7 @@ public class Zajecia6 {
     }
 
     public static String decodeCezarCode(String coddedMessage, int key) {
+
         return cezarCode(coddedMessage, -key);
     }
 
