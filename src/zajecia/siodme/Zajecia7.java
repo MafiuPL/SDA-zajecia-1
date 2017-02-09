@@ -17,6 +17,9 @@ public class Zajecia7 {
         String message = "Ala ma 2 koty i 3 psy";
         int sum = sumFromString(message);
         System.out.println("Ala ma " + sum + " zwierzat");
+        boolean check = checkRoundBraces("(2+3*(2+4*(5/7)))");
+        System.out.println(check);
+
     }
 
     public static int[] stringStatistics(String message) {
@@ -97,12 +100,27 @@ public class Zajecia7 {
         for (int i = 0; i < charArray.length; i++) {
             if (charArray[i] > 47 && charArray[i] < 58) {
                 {
-                    sum += charArray[i] - 48; }
+                    sum += charArray[i] - 48;
                 }
             }
-            return sum;
         }
-
-        
+        return sum;
     }
+
+    public static boolean checkRoundBraces(String message) {
+        char[] charArray = message.toCharArray();
+        int counter = 0;
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] == '(') {
+                counter++;
+            } else if (charArray[i] == ')') {
+                counter--;
+                if (counter < 0) {
+                    break;
+                }
+            }
+        }
+        return counter == 0;
+    }
+}
 
