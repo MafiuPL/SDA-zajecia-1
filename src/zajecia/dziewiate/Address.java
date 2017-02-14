@@ -37,4 +37,15 @@ public class Address {
         System.out.println(toPrint);
 
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", houseNumber=" + houseNumber +
+                ", zipcode='" + zipcode + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }
